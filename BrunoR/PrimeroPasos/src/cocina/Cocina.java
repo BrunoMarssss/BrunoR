@@ -1,14 +1,76 @@
 package cocina;
 
 public class Cocina {
+	
 
-	String nombre;
+	private String nombre;
 	private boolean existe_frigorifico;
 	private boolean existe_placa;
 	private int numero_frigorificos;
 	private int numero_placas;
 	private int [] miArrFrig;
 	private int [] miArrPlaca;
+
+	public Cocina(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public boolean isExiste_frigorifico() {
+		return existe_frigorifico;
+	}
+
+	public void setExiste_frigorifico(boolean existe_frigorifico) {
+		this.existe_frigorifico = existe_frigorifico;
+	}
+
+	public boolean isExiste_placa() {
+		return existe_placa;
+	}
+
+	public void setExiste_placa(boolean existe_placa) {
+		this.existe_placa = existe_placa;
+	}
+
+	public int getNumero_frigorificos() {
+		return numero_frigorificos;
+	}
+
+	public void setNumero_frigorificos(int numero_frigorificos) {
+		this.numero_frigorificos = numero_frigorificos;
+	}
+
+	public int getNumero_placas() {
+		return numero_placas;
+	}
+
+	public void setNumero_placas(int numero_placas) {
+		this.numero_placas = numero_placas;
+	}
+
+	public int[] getMiArrFrig() {
+		return miArrFrig;
+	}
+
+	public void setMiArrFrig(int[] miArrFrig) {
+		this.miArrFrig = miArrFrig;
+	}
+
+	public int[] getMiArrPlaca() {
+		return miArrPlaca;
+	}
+
+	public void setMiArrPlaca(int[] miArrPlaca) {
+		this.miArrPlaca = miArrPlaca;
+	}
+
 	
 	public String inforMob() {
 		
@@ -32,4 +94,6 @@ public class Cocina {
 		return "No existe esta opción";
 	}
 }
+
+
 
