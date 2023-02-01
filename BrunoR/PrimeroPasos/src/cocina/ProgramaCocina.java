@@ -40,29 +40,34 @@ public class ProgramaCocina {
 		
 		Scanner numero_placas=new Scanner(System.in);		
 		System.out.println("Introduce en nº de placas que tiene tu cocina: ");
-		int placas=Integer.parseInt(numero_placas.nextLine());
+		int placas=0;
+		
+		placas = Integer.parseInt(numero_placas.nextLine());
 		
 		Placa[] miArrPlaca = new Placa [placas];
-		
-		if (placas != 0){
-
-			for (int i = 0; i < miArrPlaca.length; i++) {
-				
-				Placa miplaca=new Placa();					
-				miplaca.color=miplaca.getColor();
-				
-			}	
-		}
-		else placas = 0;
+		 
+		//placas = placas != 0 ? placas : 0;
+	
+		for (int i = 0; i < miArrPlaca.length; i++) {
+			
+			Placa miplaca=new Placa();
+						
+			String coloraleatorio = miplaca.obtienecolor() ;
+			miplaca.setColor(coloraleatorio);
+			String colorplaca = miplaca.getColor();
+			
+			miArrPlaca[i] = miplaca;
+		}	
 		
 		
 		Cocina micocina = new Cocina(); //Instancias
 		micocina.setMiArrFrig(miArrFrig); 
 		
-		for (Frigorifico frigo : micocina.getMiArrFrig()) {
+		for (Frigorifico frigo : micocina.getMiArrFrig()) {						
 			System.out.println("Marca: " +  frigo.getMarca());
 		}
 		
+		for (Placa )
 		//micocina.inforMob();
 		
 	}

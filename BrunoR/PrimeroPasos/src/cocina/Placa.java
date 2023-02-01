@@ -5,24 +5,30 @@ public class Placa {
 	String color;
 	double aleatorio =  (double)(Math.random());
 	
-	
 	public String getColor() {
-		return this.color;
+		return color;
 	}
 
-	public void setColor() {
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String obtienecolor () {
+		
+		String respuesta=null;
 		
 		if (aleatorio >= 0.0 && aleatorio <= 0.33) {
 			
-			this.color = "Azul" ;
+			 respuesta="Azul" ;
 		}
 		else if (aleatorio > 0.33 && aleatorio <= 0.66) {
 			
-			this.color = "Marron" ;	
+			 respuesta="Marron" ;	
 		}
 		else if (aleatorio > 0.66 && aleatorio <= 0.99) {
 			
-			this.color = "Verde";		
+			 respuesta="Verde";		
 		}	
+		return respuesta;
 	}
 }
