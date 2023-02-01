@@ -17,16 +17,23 @@ public class ProgramaCocina {
 		int frigos=Integer.parseInt(numero_frigorificos.nextLine());
 		
 		Frigorifico[] miArrFrig = new Frigorifico [frigos];	
+		/// mis objetos
 		
 		if (frigos != 0){
 
 			for (int i = 0; i < miArrFrig.length; i++) {
 				
 				Frigorifico mifrigo=new Frigorifico();	
-				
+
 				Scanner marcafrigo=new Scanner(System.in);		
 				System.out.println("¿Cuál es su marca?");
 				String marcaFrigorifico=marcafrigo.nextLine();
+				mifrigo.setMarca(marcaFrigorifico);
+				
+				//miArrFrig = [mifrigo.marca] [mifrigo.marca] [mifrigo.marca] 
+				
+				miArrFrig[i] = mifrigo;
+				
 			}	
 		}
 		else frigos = 0;
@@ -49,10 +56,14 @@ public class ProgramaCocina {
 		else placas = 0;
 		
 		
-	//	Cocina micocina=new Cocina(
-				
-				//String cocina = micocina.getNombre() ;
-				
-				//);
+		Cocina micocina = new Cocina(); //Instancias
+		micocina.setMiArrFrig(miArrFrig); 
+		
+		for (Frigorifico frigo : micocina.getMiArrFrig()) {
+			System.out.println("Marca: " +  frigo.getMarca());
+		}
+		
+		//micocina.inforMob();
+		
 	}
 }
