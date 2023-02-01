@@ -17,6 +17,8 @@ public class ProgramaCocina {
 		int frigos=Integer.parseInt(numero_frigorificos.nextLine());
 		
 		Frigorifico[] miArrFrig = new Frigorifico [frigos];	
+		
+/// mejora albertino		List<Frigorifico>miFrigorificos = new ArrayList<Frigorifico>();
 		/// mis objetos
 		
 		if (frigos != 0){
@@ -25,7 +27,7 @@ public class ProgramaCocina {
 				
 				Frigorifico mifrigo=new Frigorifico();	
 
-				Scanner marcafrigo=new Scanner(System.in);		
+				Scanner marcafrigo=new Scanner(System.in);		// instanciar una unica vez fuera del bucle
 				System.out.println("¿Cuál es su marca?");
 				String marcaFrigorifico=marcafrigo.nextLine();
 				mifrigo.setMarca(marcaFrigorifico);
@@ -34,6 +36,7 @@ public class ProgramaCocina {
 				
 				miArrFrig[i] = mifrigo;
 				
+				miFrigorificos.add(mifrigo);
 			}	
 		}
 		else frigos = 0;
