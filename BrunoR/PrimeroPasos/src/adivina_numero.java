@@ -11,7 +11,7 @@ public class adivina_numero {
 		int numero=0;
 		int intentos=0;
 		
-		//while(numero!=aleatorio) 
+		while(numero!=aleatorio) 
 		do {
 			intentos++;
 			 System.out.println("Introduce un número, por favor");

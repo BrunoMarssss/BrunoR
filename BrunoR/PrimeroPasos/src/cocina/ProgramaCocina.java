@@ -36,7 +36,6 @@ public class ProgramaCocina {
 				
 				miArrFrig[i] = mifrigo;
 				
-				miFrigorificos.add(mifrigo);
 			}	
 		}
 		else frigos = 0;
@@ -70,8 +69,6 @@ public class ProgramaCocina {
 			System.out.println("Marca: " +  frigo.getMarca());
 		}
 		
-		for (Placa )
-		//micocina.inforMob();
 		
 	}
 }
